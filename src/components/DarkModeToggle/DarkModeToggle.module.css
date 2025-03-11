@@ -1,0 +1,24 @@
+.container {
+    display: flex;
+    border: 1.5px solid #53c28b70;
+    border-radius: 30px;
+    height: 24px;
+    width: 42px;
+    justify-content: space-between;
+    padding: 2px;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.icon {
+    font-size: 14px;
+}
+
+.ball {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #53c28b;
+}

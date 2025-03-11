@@ -1,0 +1,40 @@
+.catTitle {
+    color: #53c28b;
+}
+
+.item {
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.imgContainer {
+    flex: 1;
+    height: 500px;
+    position: relative;
+}
+
+.img {
+    object-fit: covers;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 50px;
+}
+
+.desc {
+    font-size: 20px;
+}
+
+.item:nth-child(2n+1) {
+    flex-direction: row-reverse;
+}

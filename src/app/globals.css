@@ -18,6 +18,24 @@ a {
     text-decoration: none;
 }
 
+.dark {
+    background-color: #111;
+    color: white;
+}
+
+.theme {
+    transition: 1s all ease;
+    -webkit-transition: 1s all ease;
+    -moz-transition: 1s all ease;
+    -ms-transition: 1s all ease;
+    -o-transition: 1s all ease;
+}
+
+.light {
+    background-color: white;
+    color: #111;
+}
+
 .container {
     max-width: 1366px;
     min-height: 100vh;
