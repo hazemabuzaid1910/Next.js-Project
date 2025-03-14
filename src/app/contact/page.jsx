@@ -2,12 +2,17 @@ import React from 'react'
 import Style from './page.module.css'
 import Button from '@/components/Button/Button'
 import Image from 'next/image'
+
+export const metadata = {
+  title: "hazem Contact",
+  description: "this is description",
+};
 function Contact() {
   return (
-    <div className={Style.container}>
+      <div className={Style.container}>
       <h1 className={Style.title}>Let's Keep in Touch</h1>
-   <div className={Style.content}>
-   <div className={Style.imgContainer}>
+      <div className={Style.content}>
+      <div className={Style.imgContainer}>
     <Image 
     src="/contact.png"
     alt=""

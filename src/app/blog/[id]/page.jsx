@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
+import { items } from '@/app/portfolio/[category]/data';
 
 async function getData(id) {
-  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, {
+  const res = await fetch(`http://localhost:3000/api/posts/${id}`, {
     cache: "no-store",
   });
 
@@ -12,6 +13,14 @@ async function getData(id) {
   }
 
   return res.json();
+}
+export async function generateMetadata({params}) {
+  const post=await getData(params.id )
+  return{
+    title:post.title,
+    description:post.desc,
+  };
+  
 }
 const pageBlog= async({params}) =>{
 
@@ -38,7 +47,7 @@ const pageBlog= async({params}) =>{
         </div>
         <div className={styles.imageContainer}>
           <Image
-            src="/apps.jpg"
+            src={data.image}
             alt=""
             fill={true}
             className={styles.image}
@@ -47,7 +56,7 @@ const pageBlog= async({params}) =>{
       </div>
       <div className={styles.content}>
         <p className={styles.text}>
-        {data.body}     
+        {data.content}     
            </p>
       </div>
     </div>  )
