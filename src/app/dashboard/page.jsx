@@ -51,7 +51,7 @@ const handleSubmit = async (e) => {
     img: image,  
     content,
     username: session?.data?.user?.name,
-  };  console.log("Submitting Post Data:", postData);
+  };
 
   try {
     const response = await fetch("/api/posts", {  
@@ -61,14 +61,11 @@ const handleSubmit = async (e) => {
 
     if (!response.ok) {
       const errorData = await response.json();
-      console.error("❌ Failed to create post:", errorData);
-      return;
+      return errorData;
     }
 
-    console.log("✅ Post created successfully!");
     mutate();
   } catch (err) {
-    console.error("❌ Error creating post:", err);
   }
 };
 
