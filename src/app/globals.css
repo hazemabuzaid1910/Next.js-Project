@@ -25,10 +25,6 @@ a {
 
 .theme {
     transition: 1s all ease;
-    -webkit-transition: 1s all ease;
-    -moz-transition: 1s all ease;
-    -ms-transition: 1s all ease;
-    -o-transition: 1s all ease;
 }
 
 .light {
